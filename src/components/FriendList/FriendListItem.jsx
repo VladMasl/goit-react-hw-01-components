@@ -8,11 +8,34 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
-        color: 'red',
+        fontSize: 20,
+        
       }}
     >
-      <span className="status">{isOnline}</span>
+      {isOnline === true ? (
+        <span
+          className="status"
+          style={{
+            display: 'flex',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50px',
+            backgroundColor: 'green',
+          }}
+        ></span>
+      ) : (
+        <span
+          className="status"
+          style={{
+            display: 'flex',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50px',
+            backgroundColor: 'red',
+          }}
+        ></span>
+      )}
+
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <p className="name">{name}</p>
     </li>
