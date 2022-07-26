@@ -10,10 +10,11 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         flexWrap: 'wrap',
         justifyContent: 'center',
+        margin:'30px',
         alignItems: 'center',
         fontSize: 30,
         color: '#010101',
@@ -26,10 +27,10 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      {/* <Statistics title="Upload stats" stats={data} /> */}
+      <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
-      <FriendList friends={friends} />;
-      {/* <TransactionHistory items={transactions} />; */}
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

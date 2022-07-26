@@ -1,0 +1,6 @@
+.transactionInfoItems{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid rgba(143, 241, 113, 0.795);
+    margin: 12px;
+}

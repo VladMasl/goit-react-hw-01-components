@@ -1,32 +1,22 @@
-import TransactionHistoryItem from "./TransactionHistoryItem";
-
-const TransactionHistory = (props) => {
-  const {transactions}= props;
+import TransactionHistoryItem from '../TransactionHistoryItem/TransactionHistoryItem';
+import s from './TransactionHistory.module.css';
+const TransactionHistory = props => {
+  const { items } = props;
   return (
-    <table className="transaction-history" style={{
-      height: '100px',
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: 20,
-      color: '#010101',
-    }}>
+    <table className={s.transactionHistory}>
       <thead>
-        <tr>
+        <tr className={s.optionList}>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
-      </thead> 
-      <tbody>
-       {transactions.map((el)=>(
-      <TransactionHistoryItem
-      key={el.id}
-      {...el}/>
-       ))}
+      </thead>
+      <tbody className={s.transactionInfoList}>
+        {items.map(el => (
+          <TransactionHistoryItem key={el.id} {...el} />
+        ))}
       </tbody>
-     </table>
+    </table>
   );
 };
 

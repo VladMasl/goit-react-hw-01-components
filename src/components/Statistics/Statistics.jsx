@@ -1,25 +1,15 @@
-const Statistics = () => {
-  return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+import StatisticsListItem from '../StatisticsListItem/StatisticsListItem';
+import s from './Statistics.module.css';
+const Statistics = props => {
+  const { title, stats } = props;
 
-      <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
+  return (
+    <section className={s.statistics}>
+     {title && (<h2 className={s.title}>{title}</h2>)}
+      <ul className={s.statList}>
+        {stats.map(el => (
+          <StatisticsListItem key={el.id} {...el} />
+        ))}
       </ul>
     </section>
   );
