@@ -4,9 +4,9 @@ import s from './TransactionHistoryItem.module.css';
 const TransactionHistoryItem = ({ type, amount, currency }) => {
   return (
     <tr className={s.transactionInfoItems}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <td className={s.items}>{type}</td>
+      <td className={s.items}>{amount}</td>
+      <td className={s.items}>{currency}</td>
     </tr>
   );
 };

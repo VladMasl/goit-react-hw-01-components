@@ -1,6 +1,15 @@
-.transactionInfoItems{
-    display: flex;
-    justify-content: space-around;
-    border: 2px solid rgba(143, 241, 113, 0.795);
-    margin: 12px;
+.transactionInfoItems {
+  display: flex;
+  justify-content: space-around;
+  margin: 6px;
+  border: 2px solid rgba(143, 241, 113, 0.795);
+  background-color: rgba(128, 255, 0, 0.377);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.items {
+  width: 90px;
+  font-size: 18px;
+  color: black;
 }
